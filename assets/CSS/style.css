@@ -1,0 +1,132 @@
+@charset "UTF-8";
+​ body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+​ p {
+  color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+​ h1 {
+  color: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+​ div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+​ .example {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+​ .example2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+​ .paragraph {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+​ .section {
+  background-color: pink;
+}
+​ .section .paragraph {
+  color: green;
+}
+
+.container-grid {
+  width: 100%;
+  background-color: black;
+  display: grid;
+  grid-template-areas: "navbar navbar navbar" "menu products products" "footer footer footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+}
+@media (max-width: 480px) {
+  .container-grid {
+    grid-template-areas: "navbar navbar navbar" "products products products" "footer footer footer";
+  }
+}
+.container-grid .navbar {
+  grid-area: navbar;
+  height: 50px;
+  background-color: greenyellow;
+}
+@media (max-width: 480px) {
+  .container-grid .navbar:hover + .menu {
+    display: block;
+  }
+}
+.container-grid .menu {
+  grid-area: menu;
+  height: 100%;
+  background-color: aquamarine;
+}
+@media (max-width: 480px) {
+  .container-grid .menu {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100vw;
+    height: 100px;
+  }
+}
+.container-grid .products {
+  grid-area: products;
+  background-color: chocolate;
+  height: 100%;
+}
+.container-grid .products .product-container {
+  background-color: azure;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .container-grid .products .product-container {
+    justify-content: center;
+  }
+}
+.container-grid .products .product-container .product {
+  width: 30%;
+  height: 200px;
+  background-color: blue;
+  margin: 10px;
+}
+@media (max-width: 480px) {
+  .container-grid .products .product-container .product {
+    width: 45%;
+  }
+}
+.container-grid .footer {
+  grid-area: footer;
+  height: 70px;
+  background-color: palevioletred;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,135 @@
+// variables
+$color_a: pink;
+$color_b: green;
+$color_c: black;
+
+// mixins
+@mixin flex($dir:row, $jCont:center, $aIt:center){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jCont;
+    align-items: $aIt;
+  }
+  ​
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //width: 100vw; //solo activar para desafio 1
+    //height: 100vh; // solo activar para desafio 1
+    //overflow: hidden; // solo activar para desafio 1
+  }
+  ​
+  p {
+    color: $color_a;
+    @include flex;
+  }
+  ​
+  h1{
+    color: $color_b;
+    @include flex;
+  }
+  ​
+  div {
+    //background-color: $color_b;
+    @include flex(column, flex-start, center);
+  }
+  ​
+  .example {
+    @include flex(column, flex-start, center);
+  }
+  ​
+  .example2 {
+    @include flex(column, flex-start, center);
+  }
+  ​
+  .paragraph{
+    font: {
+      size: 12px;
+      weight: 600;
+      family: Arial, sans-serif;
+    }
+    color:$color_c;
+  }
+  ​
+  .section{
+    background-color: $color_a;
+    .paragraph{
+      color: $color_b;
+    }
+  }
+
+.container-grid{
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-areas: 
+      "navbar navbar navbar"
+      "menu products products"
+      "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+      grid-template-areas: 
+        "navbar navbar navbar"
+        "products products products"
+        "footer footer footer";
+    }
+    .navbar{
+      grid-area: navbar;
+      height: 50px;
+      background-color: greenyellow;
+      &:hover{
+        + .menu{
+          @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+            display: block;
+          }
+        }
+      }
+    }
+    .menu{
+      grid-area: menu;
+      height: 100%;
+      background-color: aquamarine;
+      @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+        display: none;
+        position: fixed;
+        top: 50px;
+        left: 0px;
+        width: 100vw;
+        height: 100px;
+      }
+    }
+    .products{
+      grid-area: products;
+      background-color: chocolate;
+      height: 100%;
+      .product-container {
+        background-color: azure;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+          justify-content: center;
+        }
+        .product{
+          width: 30%;
+          height: 200px;
+          background-color: blue;
+          margin: 10px;
+          @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+            width: 45%;
+          }
+        }
+      }
+    }
+    .footer{
+      grid-area: footer;
+      height: 70px;
+      background-color: palevioletred;
+    }
+  }
