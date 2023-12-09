@@ -70,7 +70,7 @@ $color_c: black;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-gap: 10px;
-    @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+    @media (max-width: 480px) {
       grid-template-areas: 
         "navbar navbar navbar"
         "products products products"
@@ -82,7 +82,7 @@ $color_c: black;
       background-color: greenyellow;
       &:hover{
         + .menu{
-          @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+          @media (max-width: 480px) { 
             display: block;
           }
         }
@@ -92,7 +92,7 @@ $color_c: black;
       grid-area: menu;
       height: 100%;
       background-color: aquamarine;
-      @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+      @media (max-width: 480px) {
         display: none;
         position: fixed;
         top: 50px;
@@ -113,7 +113,7 @@ $color_c: black;
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
-        @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+        @media (max-width: 480px) { 
           justify-content: center;
         }
         .product{
@@ -121,7 +121,7 @@ $color_c: black;
           height: 200px;
           background-color: blue;
           margin: 10px;
-          @media (max-width: 480px) { //BOOTSTRAP BREAKPOINTS SON DEL DESAFIO 3
+          @media (max-width: 480px) { 
             width: 45%;
           }
         }
