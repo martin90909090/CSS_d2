@@ -117,13 +117,17 @@
 .container-grid .products .product-container .product {
   width: 30%;
   height: 200px;
-  background-color: blue;
+  background-color: white;
   margin: 10px;
 }
 @media (max-width: 480px) {
   .container-grid .products .product-container .product {
     width: 45%;
   }
+}
+.container-grid .products .product-container .product img {
+  width: 100%;
+  height: 80%;
 }
 .container-grid .footer {
   grid-area: footer;
