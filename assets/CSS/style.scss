@@ -1,17 +1,5 @@
-// variables
-$color_a: pink;
-$color_b: green;
-$color_c: black;
 
-// mixins
-@mixin flex($dir:row, $jCont:center, $aIt:center){
-    display: flex;
-    flex-direction: $dir;
-    justify-content: $jCont;
-    align-items: $aIt;
-  }
-  ​
-  body {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,47 +7,8 @@ $color_c: black;
     //height: 100vh; // solo activar para desafio 1
     //overflow: hidden; // solo activar para desafio 1
   }
-  ​
-  p {
-    color: $color_a;
-    @include flex;
-  }
-  ​
-  h1{
-    color: $color_b;
-    @include flex;
-  }
-  ​
-  div {
-    //background-color: $color_b;
-    @include flex(column, flex-start, center);
-  }
-  ​
-  .example {
-    @include flex(column, flex-start, center);
-  }
-  ​
-  .example2 {
-    @include flex(column, flex-start, center);
-  }
-  ​
-  .paragraph{
-    font: {
-      size: 12px;
-      weight: 600;
-      family: Arial, sans-serif;
-    }
-    color:$color_c;
-  }
-  ​
-  .section{
-    background-color: $color_a;
-    .paragraph{
-      color: $color_b;
-    }
-  }
-
-.container-grid{
+  
+  .container-grid{
     width: 100%;
     background-color: black;
     display: grid;
@@ -100,6 +49,9 @@ $color_c: black;
         left: 0px;
         width: 100vw;
         height: 100px;
+      }
+      li{
+        list-style-type: none;
       }
     }
 
