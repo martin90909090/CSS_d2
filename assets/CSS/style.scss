@@ -29,12 +29,9 @@ body {
       grid-area: navbar;
       height: 50px;
       background-color: greenyellow;
-      &:hover{
-        + .menu{
-          @media (max-width: 480px) { 
-            display: block;
-          }
-        }
+      text-align: center;
+      h1{
+        
       }
     }
 

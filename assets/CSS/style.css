@@ -22,11 +22,7 @@ body {
   grid-area: navbar;
   height: 50px;
   background-color: greenyellow;
-}
-@media (max-width: 480px) {
-  .container-grid .navbar:hover + .menu {
-    display: block;
-  }
+  text-align: center;
 }
 .container-grid .menu {
   grid-area: menu;
