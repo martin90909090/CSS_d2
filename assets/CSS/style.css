@@ -29,7 +29,7 @@ body {
   height: 100%;
   background-color: aquamarine;
 }
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .container-grid .menu {
     display: none;
     position: fixed;
