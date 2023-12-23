@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  color: black;
 }
 
 .container-grid {
@@ -22,13 +23,16 @@ body {
 .container-grid .navbar {
   grid-area: navbar;
   height: 50px;
-  background-color: greenyellow;
+  background-color: peachpuff;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .container-grid .menu {
   grid-area: menu;
   height: 100%;
-  background-color: aquamarine;
+  font-weight: 600;
+  background-color: peachpuff;
 }
 @media (max-width: 479px) {
   .container-grid .menu {
@@ -45,7 +49,7 @@ body {
 }
 .container-grid .products {
   grid-area: products;
-  background-color: chocolate;
+  background-color: peachpuff;
   height: 100%;
 }
 .container-grid .products .product-container {
@@ -92,5 +96,11 @@ body {
 .container-grid .footer {
   grid-area: footer;
   height: 70px;
-  background-color: palevioletred;
+  font-weight: 600;
+  background-color: peachpuff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
